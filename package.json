@@ -1,6 +1,6 @@
 {
   "name": "ng-notification",
-  "description": "",
+  "description": "Angular directive for bootstrap notification display.",
   "version": "0.0.1",
   "author": {
     "name": "Julien Valéry",
@@ -33,6 +33,6 @@
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-cssmin": "~0.6.0",
-    "karma": "0.11.2"
+    "karma": "latest"
   }
 }

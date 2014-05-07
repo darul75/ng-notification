@@ -1,12 +1,31 @@
-<head>	
-	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>	
+<head>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="ng-notification.css">
+	<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="ng-notification.js"></script>
 </head>
 <body>	
 
-	<script type="text/javascript">	
+	<div ng-app='myApp' ng-controller='ctrl'>
+		<notification></notification>
+		<button class='btn btn-primary' ng-click="test('primary')" style="position:absolute; top:100px;">Primary</button>
+		<button class='btn btn-success' ng-click="test('success')" style="position:absolute; top:300px;">Success</button>
+		<button class='btn btn-info' ng-click="test('info')" style="position:absolute; top:500px;">Info</button>
+		<button class='btn btn-warning' ng-click="test('warning')" style="position:absolute; top:800px;">Warning</button>
+		<button class='btn btn-danger' ng-click="test('danger')" style="position:absolute; top:1200px;">Danger</button>
+		<button class='btn btn-danger' ng-click="test('unknown')" style="position:absolute; top:1200px;">Unknown type</button>
+	</div>
 
+	<script type="text/javascript">
 
-	
+		angular.module('myApp', ['ngNotification']);
+
+        function ctrl($scope) {            
+
+            $scope.test = function(type) {
+            	 $scope.$broadcast('notification', {type: type, msg:'This is ' + type + ' and it can be long message why not'});
+            }
+        }
 	</script>
 
 </body>

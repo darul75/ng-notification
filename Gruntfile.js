@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      files: ['src/ng-prettyjson.js', 'test/**/*.js']
+      files: ['src/ng-notification.js', 'test/**/*.js']
     },
     // KARMA TASK CONFIG
     karma: {
@@ -17,9 +17,9 @@ module.exports = function(grunt) {
           autoWatch: true,
           singleRun: true,
           files: [            
-            'src/bower_components/angular/angular.js',
-            'src/bower_components/angular-mocks/angular-mocks.js',                                    
-            'src/ng-prettyjson.js',
+            'bower_components/angular/angular.js',
+            'bower_components/angular-mocks/angular-mocks.js',                                    
+            'src/ng-notification.js',
             'test/**/*Spec.js']
         }
       }
@@ -31,11 +31,11 @@ module.exports = function(grunt) {
             preserveComments: 'some',
             report: 'min',
             banner: '/** \n* @license <%= pkg.name %> - v<%= pkg.version %>\n' + 
-             '* (c) 2013 Julien VALERY https://github.com/darul75/ng-prettyjson\n' +
+             '* (c) 2013 Julien VALERY https://github.com/darul75/ng-notification\n' +
              '* License: MIT \n**/\n'
          },         
          files: {
-             'dist/ng-prettyjson.min.js': ['src/ng-prettyjson.js']
+             'dist/ng-notification.min.js': ['src/ng-notification.js']
          }
        }
      },
@@ -44,12 +44,12 @@ module.exports = function(grunt) {
       options: {
         keepSpecialComments: false,
         banner: '/** \n* @license <%= pkg.name %> - v<%= pkg.version %>\n' + 
-             '* (c) 2013 Julien VALERY https://github.com/darul75/ng-prettyjson\n' +
+             '* (c) 2013 Julien VALERY https://github.com/darul75/ng-notification\n' +
              '* License: MIT \n**/\n'
       },
       compress: {
         files: {          
-          'dist/ng-prettyjson.min.css': ['src/ng-prettyjson.css']
+          'dist/ng-notification.min.css': ['src/ng-notification.css']
         }
       }
   }

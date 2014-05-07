@@ -1,68 +1,122 @@
 #message_container {
-    position: absolute;
-    right: 20px;
+    position: fixed;
+    right: 10px;
     margin: 0 auto 10px;    
-    padding: 10px;
-    overflow: auto;
+    top:50px;
+    right:0px;
 }
 
-  #message_container.animation {
-    -webkit-border-radius:30px;
-    -moz-border-radius:30px;
-    border-radius:30px;
-    
-    background-color:#fff;    
-  }
+div#point
+{
+      background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #53C8EE),
+    color-stop(1, #75F0FF)
+  );
 
-p#message.animation {
-
-    float: left;
-    color: #000;
-    border-color: #39B919 #39B919 #39B919 #39B919;
-    border-style: solid;
-    border-width: 1px;
-    height: 22px;
-    -webkit-border-radius: 5px 0px 0px 5px;
-    left: 15px;
+  background-image: -o-linear-gradient(bottom, #53C8EE 0%, #75F0FF 100%);
+  background-image: -moz-linear-gradient(bottom, #53C8EE 0%, #75F0FF 100%);
+  background-image: -webkit-linear-gradient(bottom, #53C8EE 0%, #75F0FF 100%);
+  background-image: -ms-linear-gradient(bottom, #53C8EE 0%, #75F0FF 100%);
+  background-image: linear-gradient(to bottom, #53C8EE 0%, #75F0FF 100%);
+    width: 3px;
+    height: 3px;
     position: relative;
+    background-color: blue;
+    /*border: 3px solid blue;*/    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    position: absolute;
+    /*-webkit-transform-style: preserve-3d;    
+    -webkit-transform: rotateX(80deg) rotateY(20deg);*/
+
+    -webkit-animation:drawpoint 3s linear infinite;
+}
+
+div#message.animation {
+
+    position: relative;    
+    /*right: -85%;*/
+    float: left;        
+    -webkit-border-radius: 5px 0px 0px 5px;    
+    height: 22px;
     padding-right: 15px;
     padding-left: 10px;
-    
+    opacity: 0;
         
-    -webkit-animation:movingmessage 0.3s ease 2s 1 forwards;
+    -webkit-animation:showmessage 0.5s ease 0.2s 1 forwards, hidemessage 2s ease 3s 1 forwards;
             
 }
 
-p#circle {
-
-    float: left;
-    border: 2px solid #39B919;
-    -moz-border-radius: 75px;
-    -webkit-border-radius: 120px;
-    width: 45px;
-    height: 20px;
-    margin-left: 6px;
-    padding-left: 8px;
-    -webkit-animation: movingcircle 0.3s ease 2s 1 forwards;
-    background-color: #39B919;
-    color: white;    
+div#circle1 {    
+    
+    position: absolute;
+    float: left;     
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    right: 20px;
+    -webkit-animation:movingfirst 0.2s ease 1s 1 forwards;
 
 }
 
-@-webkit-keyframes movingmessage{
+div#circle2 {    
+    
+    position: absolute;
+    float: left;    
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    right: 20px; 
+    opacity: 0;
+    -webkit-animation:movingsecond 0.2s ease 5s 1 forwards;
+
+}
+
+@-webkit-keyframes drawpoint {
   
-  20% {-webkit-transform: rotateY(720deg);}  
-  100% {font-size: 0%;display: none;border-width: 0px;}
+  0% {left:0%; }
+  25% {left:25%; -webkit-transform: translateY(-20px)}
+  50% {left:50%; -webkit-transform: translateY(20px)}
+  70% {left:70%; -webkit-transform: translateY(-10px)}
+  75% {left:75%; -webkit-transform: translateY(10px)} 
+  100% {left:100%;} 
   
 }
 
-@-webkit-keyframes movingcircle{  
-  20% {left:100%;-webkit-transform: rotateY(720deg);}  
-  100% {font-size:0px; width:0px;height: 0px;display: none;border: 0px solid #39B919;} 
+@-webkit-keyframes showmessage {
+  
+  0% {}
+  100% {right:0%;opacity: 1;-webkit-transform: scale(1.0)} 
+  
 }
 
+@-webkit-keyframes hidemessage {
+  
+  0% {opacity: 1;}  
+  100% {opacity: 0;} 
+  
+}
 
-  #ease.test_box {
+@-webkit-keyframes movingfirst {    
+
+  0% {}
+  100% {-webkit-transform: scale(0);}  
+
+}
+
+@-webkit-keyframes movingsecond {    
+
+  0% {}  
+  100% {-webkit-transform: scale(1);opacity: 1.0}  
+
+}
+
+/*  #ease.test_box {
     -webkit-transition: all 4s ease;
 -moz-transition: all 4s ease;
 -o-transition: all 4s ease;
@@ -88,9 +142,9 @@ transition: all 4s ease-in-out;    border:1px #ff0 solid;
   }
   #linear.test_box {
     -webkit-transition: all 4s linear;
--moz-transition: all 4s linear;
--o-transition: all 4s linear;
-transition: all 4s linear;    border:1px #f0f solid;
+    -moz-transition: all 4s linear;
+    -o-transition: all 4s linear;
+    transition: all 4s linear;    border:1px #f0f solid;
   }
   #custom.test_box {
     -webkit-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
@@ -103,4 +157,4 @@ transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);    border:1px #0ff 
 -moz-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
 -o-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
 transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);    border:1px #000 dotted;
-  }
+  }*/
