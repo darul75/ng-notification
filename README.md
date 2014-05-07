@@ -1,15 +1,61 @@
 ng-prettyjson [![NPM version](https://badge.fury.io/js/ng-notification.png)](http://badge.fury.io/js/ng-prettyjson) [![Build Status](https://travis-ci.org/darul75/ng-notification.png?branch=master)](https://travis-ci.org/darul75/ng-notification)
 =====================
 
+Simple angular notification directive Bootstrap 3 style. Small CSS3 effect included.
 
+Why
+------------
+
+I had to test some CSS3 instructions and play with it.
+
+Then AngularStrap or native Boostrap alert messages are not very friendly, popup too big, this one looks less intrusive.
+
+This directive is fully based on angular event broadcasting, you trigger event => directive catch it.
 
 Demo
 ------------
+http://darul75.github.io/ng-notification/
 
+How to use it
+-------------
 
+You should already have script required for Angular, note sanitize module use.
 
-Screenshot
-------------
+```html
+<script type="text/javascript" src="angular.min.js"></script>
+```
+
+to the list above, you should add:
+
+```html
+<link rel="stylesheet" type="text/css" href="ng-notification.min.css">
+```
+
+```html
+<script type="text/javascript" src="ng-notification.min.js"></script>
+```
+
+Then, inject `ngNotification` in your application module:
+
+```javascript
+angular.module('myApp', ['ngNotification']);
+```
+
+and then just add 
+
+```html
+<notification></notification>
+```
+
+```javascript
+$scope.$broadcast('notification', {type: 'info', msg:'This is ' + type + ' and it can be long message why not'});
+// possible type field values are : 'primary','success', 'info', 'warning', 'danger'
+
+```
+
+### Options
+
+TODO
 
 
 Installation
@@ -18,6 +64,7 @@ Installation
 Using npm:
 
 ```
+npm install ng-notification
 
 ```
 
