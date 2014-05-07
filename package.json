@@ -1,7 +1,7 @@
 {
   "name": "ng-notification",
   "description": "Angular directive for bootstrap notification display.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"
@@ -14,10 +14,9 @@
   },
   "keywords": [
     "angular",
-    "json",
-    "pretty",
-    "color",
-    "format"
+    "ui",
+    "notification",
+    "alert"
   ],
   "scripts": {
     "test": "./node_modules/.bin/karma start test/my.conf.js"
