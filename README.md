@@ -1,7 +1,11 @@
-ng-prettyjson [![NPM version](https://badge.fury.io/js/ng-notification.png)](http://badge.fury.io/js/ng-prettyjson) [![Build Status](https://travis-ci.org/darul75/ng-notification.png?branch=master)](https://travis-ci.org/darul75/ng-notification) [![Total views](https://sourcegraph.com/api/repos/github.com/darul75/ng-notification/counters/views.png)](https://sourcegraph.com/github.com/darul75/ng-notification)
+ng-prettyjson [![NPM version](https://badge.fury.io/js/ng-notification.png)](http://badge.fury.io/js/ng-notification) [![Build Status](https://travis-ci.org/darul75/ng-notification.png?branch=master)](https://travis-ci.org/darul75/ng-notification) [![Total views](https://sourcegraph.com/api/repos/github.com/darul75/ng-notification/counters/views.png)](https://sourcegraph.com/github.com/darul75/ng-notification)
 =====================
 
-Simple angular notification directive Bootstrap 3 style. Small CSS3 effect included.
+Simple angular notification directive Bootstrap 3 style. 
+
+It includes a small CSS3 effect, so you may guess IE6 do not like it.
+
+*Bootstrap version 3.*
 
 Why
 ------------
