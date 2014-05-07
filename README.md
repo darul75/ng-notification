@@ -19,7 +19,7 @@ http://darul75.github.io/ng-notification/
 How to use it
 -------------
 
-You should already have script required for Angular, note sanitize module use.
+You should already have script required for Angular.
 
 ```html
 <script type="text/javascript" src="angular.min.js"></script>
@@ -29,13 +29,10 @@ to the list above, you should add:
 
 ```html
 <link rel="stylesheet" type="text/css" href="ng-notification.min.css">
-```
-
-```html
 <script type="text/javascript" src="ng-notification.min.js"></script>
 ```
 
-Then, inject `ngNotification` in your application module:
+Inject `ngNotification` in your application module:
 
 ```javascript
 angular.module('myApp', ['ngNotification']);
@@ -46,6 +43,8 @@ and then just add
 ```html
 <notification></notification>
 ```
+
+and broadcast some events to display notifications when needed
 
 ```javascript
 $scope.$broadcast('notification', {type: 'info', msg:'This is ' + type + ' and it can be long message why not'});
