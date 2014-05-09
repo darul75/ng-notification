@@ -1,7 +1,7 @@
 {
   "name": "ng-notification",
   "description": "Angular directive for bootstrap notification display.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"
@@ -19,19 +19,20 @@
     "alert"
   ],
   "scripts": {
-    "test": "./node_modules/.bin/karma start test/my.conf.js"
+    "test": "grunt karma"
   },
   "bugs": {
     "url": "https://github.com/darul75/ng-notification/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "latest",
     "grunt-karma": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-cssmin": "~0.6.0",
-    "karma": "latest"
+    "karma": "latest",
+    "grunt-bower-task": "~0.3.4",
+    "karma-phantomjs-launcher": "~0.1.4"
   }
 }

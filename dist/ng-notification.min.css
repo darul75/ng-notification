@@ -1,5 +1,5 @@
 /** 
-* @license ng-notification - v0.0.1
+* @license ng-notification - v0.0.3
 * (c) 2013 Julien VALERY https://github.com/darul75/ng-notification
 * License: MIT 
 **/
