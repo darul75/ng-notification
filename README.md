@@ -1,20 +1,14 @@
 ng-notification [![NPM version](https://badge.fury.io/js/ng-notification.png)](http://badge.fury.io/js/ng-notification) [![Build Status](https://travis-ci.org/darul75/ng-notification.png?branch=master)](https://travis-ci.org/darul75/ng-notification) [![Total views](https://sourcegraph.com/api/repos/github.com/darul75/ng-notification/counters/views.png)](https://sourcegraph.com/github.com/darul75/ng-notification)
 =====================
 
-Simple angular notification directive Bootstrap 3 style. 
-
-It includes a small CSS3 effect, so you may guess IE6 do not like it.
+Simple angular notification directive Bootstrap 3 style. It includes a small CSS3 effect, so you may guess IE6 do not like it.
 
 *Bootstrap version 3.*
 
 Why
 ------------
 
-I had to test some CSS3 instructions and play with it.
-
-Then AngularStrap or native Boostrap alert messages are not very friendly, popup too big, this one looks less intrusive.
-
-This directive is fully based on angular event broadcasting, you trigger event => directive catch it.
+I had to test some CSS3 instructions and play with it. Then AngularStrap or native Boostrap alert messages are not very friendly, popup too big, this one looks less intrusive. This directive is fully based on angular event broadcasting, you trigger event => directive catch it.
 
 Demo
 ------------
