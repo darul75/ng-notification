@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         options: {
           basePath: './',
           frameworks: ['jasmine'],
-          browsers: ['Chrome'],
+          browsers: ['Firefox'],
           autoWatch: true,
           singleRun: true,
           files: [            
