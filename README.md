@@ -46,13 +46,10 @@ and broadcast some events to display notifications when needed
 
 ```javascript
 $scope.$broadcast('notification', {type: 'info', msg:'This is ' + type + ' and it can be long message why not'});
-// possible type field values are : 'primary','success', 'info', 'warning', 'danger'
-
 ```
 
-### Options
-
-TODO
+- possible `type` field values are : `primary`,`success`,`info`,`warning`,`danger`
+- colors available in CSS file for each values
 
 
 Installation
@@ -62,9 +59,13 @@ Using npm:
 
 ```
 npm install ng-notification
-
 ```
 
+Using bower:
+
+```
+bower install ng-notification
+```
 
 How to use it
 -------------
